@@ -14,6 +14,7 @@ class ProductListScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Products'),
+        backgroundColor: Colors.amber,
         actions: [
           IconButton(
             icon: Icon(Icons.add),

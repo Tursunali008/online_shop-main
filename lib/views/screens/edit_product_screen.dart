@@ -36,6 +36,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Edit Product'),
+        backgroundColor: Colors.amber,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),

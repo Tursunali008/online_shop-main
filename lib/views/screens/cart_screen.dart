@@ -10,6 +10,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.amber,
         title: Text('Cart'),
       ),
       body: BlocBuilder<CartCubit, List<CartItem>>(
@@ -30,13 +31,17 @@ class CartScreen extends StatelessWidget {
                           IconButton(
                             icon: Icon(Icons.remove),
                             onPressed: () {
-                              context.read<CartCubit>().removeFromCart(cartItem.product);
+                              context
+                                  .read<CartCubit>()
+                                  .removeFromCart(cartItem.product);
                             },
                           ),
                           IconButton(
                             icon: Icon(Icons.add),
                             onPressed: () {
-                              context.read<CartCubit>().addToCart(cartItem.product);
+                              context
+                                  .read<CartCubit>()
+                                  .addToCart(cartItem.product);
                             },
                           ),
                         ],
@@ -48,7 +53,8 @@ class CartScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   context.read<OrderCubit>().placeOrder(cartItems);
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => OrderScreen()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => OrderScreen()));
                 },
                 child: Text('Place Order'),
               ),

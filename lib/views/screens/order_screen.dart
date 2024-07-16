@@ -9,6 +9,7 @@ class OrderScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('Orders'),
+        backgroundColor: Colors.amber,
       ),
       body: BlocBuilder<OrderCubit, List<Order>>(
         builder: (context, orders) {
